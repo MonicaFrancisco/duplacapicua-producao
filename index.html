@@ -37,14 +37,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
 
-    <script language="JavaScript">
-    function toggle(source) {
-      checkboxes = document.getElementsByName('check');
-      for(var i=0, n=checkboxes.length;i<n;i++) {
-        checkboxes[i].checked = source.checked;
-      }
-    }
-    </script>
+  
 
 </head>
 
@@ -54,7 +47,7 @@
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->  
-            <a class="navbar-brand page-scroll" href="#page-top">Dupla Capicua</a>
+            <a class="navbar-brand page-scroll" href="index.html">Dupla Capicua</a>
         </div>
         <!-- /.container-fluid -->
     </nav>
@@ -70,7 +63,7 @@
             <div class="row">
                  <center> <form role="form">
                         <div class="input-group col-xs-5">
-                            <input type="text" class="form-control" placeholder="Pesquisar">
+                            <input type="text" id="search" class="form-control" placeholder="Pesquisar">
                             <div class="input-group-btn">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="height:34px;">
                                     <span class="caret"></span>
@@ -164,6 +157,27 @@
     </footer>
 
 
+  <script>
+    //Select all
+    function toggle(source) {
+      checkboxes = document.getElementsByName('check');
+      for(var i=0, n=checkboxes.length;i<n;i++) {
+        checkboxes[i].checked = source.checked;
+      }
+    }
+
+    $("#search").keyup(function() {
+        var search = document.getElementById("search").value;
+        
+        alert(search);
+        /*var elem = document.getElementsByTagName("h4");
+        for (var i = 0; i < elem.length; i++) {
+           alert(elem[i].innerHTML);
+        }*/
+
+    });
+
+</script>
 
     <script src="js/contact_me.js"></script>
 
