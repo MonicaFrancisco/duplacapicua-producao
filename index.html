@@ -37,6 +37,15 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
 
+    <script language="JavaScript">
+    function toggle(source) {
+      checkboxes = document.getElementsByName('check');
+      for(var i=0, n=checkboxes.length;i<n;i++) {
+        checkboxes[i].checked = source.checked;
+      }
+    }
+    </script>
+
 </head>
 
 <body id="page-top" class="index">
@@ -61,31 +70,31 @@
             <div class="row">
                  <center> <form role="form">
                         <div class="input-group col-xs-5">
-                            <input type="text" class="form-control" id="icon">
+                            <input type="text" class="form-control" placeholder="Pesquisar">
                             <div class="input-group-btn">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="height:34px;">
                                     <span class="caret"></span>
                                 </button>
                                 <ul role="menu" class="dropdown-menu">
                                     <li><a href="#">
-                                        <input type="checkbox"><span class="lbl"> Seleccionar todos</span>
+                                        <input type="checkbox" onClick="toggle(this)"><span class="lbl"> Seleccionar todos</span>
                                     </a></li>
                                     <li class="divider"></li>
                                     <li><a href="#">
-                                        <input type="checkbox">
+                                        <input type="checkbox"  name="check">
                                         <span class="lbl"> Nome</span></a>
                                     </li>
                                     <li><a href="#">
-                                        <input type="checkbox"><span class="lbl">
-                                        Experiência</span>
+                                        <input type="checkbox" name="check">
+                                        <span class="lbl">Experiência</span>
                                     </a></li>
                                         <li><a href="#">
-                                        <input type="checkbox"><span class="lbl">
-                                        Projectos</span>
+                                        <input type="checkbox" name="check">
+                                        <span class="lbl">Projectos</span>
                                     </a></li>
                                     <li><a href="#">
-                                        <input type="checkbox"><span class="lbl">
-                                        Competências</span>
+                                        <input type="checkbox" name="check">
+                                        <span class="lbl">Competências</span>
                                     </a></li>   
                                 </ul>
                             </div>
