@@ -287,3 +287,10 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0db9b9;
 }
+
+a.disabled {
+   background-color: #333!important;
+   text-decoration: none;
+   pointer-events: none;
+   cursor: default;
+}
