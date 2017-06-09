@@ -83,7 +83,7 @@
                     </form>
                 </center>
             </div>
-
+			<center><div class="msg"></div></center>
             <div class="row">
                 <div class="team-member col-sm-4" >
                    <a href="profile_margarida.html"><img src="img/1.jpg" class="img-responsive img-circle" alt=""></a>
@@ -149,17 +149,24 @@
         }
 
         $("#search").keyup(function() {
+			$('.msg').html('');
             var search = document.getElementById("search").value;
             
             $('.team-member').hide();
 
             var txt = $('#search').val();
 
-            $('.team-member').each(function(){
-               if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
-                   $(this).show();
-               }
-            });
+			var existe = false;
+			$('.team-member').each(function(){
+			   if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+				   $(this).show();
+				   existe = true;
+			   }
+			});
+			
+			if(existe==false){
+				$('.msg').html('Não foram encontrados resultados');
+			}
 
         });
 
